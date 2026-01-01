@@ -127,7 +127,7 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		loop: true,
 		infinite: true,
-		autoplay: False,
+		autoplay: false,
 		autoplaySpeed: 5000,
     }
 
