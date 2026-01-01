@@ -1,829 +1,510 @@
-/* Hero Banner Styles */
-.hero.is-primary.is-large {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero.is-primary.is-large::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
-  z-index: 1;
-}
-
-.hero.is-primary.is-large .hero-body {
-  position: relative;
-  z-index: 2;
-}
-
-.hero.is-primary.is-large .title {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 1rem;
-}
-
-.hero.is-primary.is-large .subtitle {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  margin-bottom: 2rem;
-}
-
-/* Modern CSS Variables for consistent theming */
-:root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary-color: #64748b;
-  --accent-color: #0ea5e9;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-light: #94a3b8;
-  --background-primary: #ffffff;
-  --background-secondary: #f8fafc;
-  --background-accent: #f1f5f9;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-subtle: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-  --border-radius: 12px;
-  --border-radius-lg: 16px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Smooth scrolling for better UX */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--text-primary);
-  line-height: 1.6;
-  font-size: 16px;
-  background-color: var(--background-primary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-/* Modern Button Styles */
-.button {
-  border-radius: var(--border-radius) !important;
-  font-weight: 600 !important;
-  transition: var(--transition) !important;
-  border: 2px solid transparent !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.button.is-dark {
-  background: var(--text-primary) !important;
-  border: none !important;
-  color: white !important;
-  box-shadow: var(--shadow-md);
-}
-
-.button.is-dark:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  background: var(--primary-color) !important;
-}
-
-.button.is-dark:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-md);
-}
-
-.footer .icon-link {
-    font-size: 25px;
-    color: var(--text-secondary);
-    transition: var(--transition);
-}
-
-.footer .icon-link:hover {
-    color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-.link-block a {
-    margin: 8px 4px;
-}
-
-.dnerf {
-  font-variant: small-caps;
-}
-
-
-/* Hero Section Modernization */
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero.is-light {
-  background: var(--background-secondary);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.hero-body {
-  padding: 4rem 1.5rem;
-}
-
-.teaser .hero-body {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
-
-.teaser {
-  font-family: 'Inter', sans-serif;
-}
-
-
-/* Publication Content Styling */
-.publication-title {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 800 !important;
-    color: var(--text-primary) !important;
-    margin-bottom: 2rem !important;
-    line-height: 1.2 !important;
-    font-size: 2.25rem !important;
-}
-
-/* Responsive font sizes for publication title */
-@media (max-width: 768px) {
-    .publication-title {
-        font-size: 2rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .publication-title {
-        font-size: 1.5rem !important;
-    }
-}
-
-.publication-banner {
-  max-height: 70vh;
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  margin: 2rem 0;
-}
-
-.publication-banner video {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius-lg);
-}
-
-.publication-header .hero-body {
-  padding: 6rem 1.5rem 4rem;
-}
-
-.publication-authors {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-}
-
-.publication-venue {
-    color: var(--text-secondary);
-    width: fit-content;
-    font-weight: 600;
-    background: var(--background-accent);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
-    display: inline-block;
-}
-
-.publication-awards {
-    color: #ef4444;
-    width: fit-content;
-    font-weight: 700;
-    background: linear-gradient(135deg, #fef2f2, #fee2e2);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    border-left: 4px solid #ef4444;
-    margin-top: 1rem;
-}
-
-.publication-authors a {
-   color: var(--primary-color) !important;
-   text-decoration: none;
-   font-weight: 600;
-   transition: var(--transition);
-   position: relative;
-}
-
-.publication-authors a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background: var(--gradient-accent);
-    transition: var(--transition);
-}
-
-.publication-authors a:hover::after {
-    width: 100%;
-}
-
-.publication-authors a:hover {
-    color: var(--primary-hover) !important;
-}
-
-.author-block {
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.publication-banner img {
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: var(--transition);
-}
-
-.publication-banner img:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-xl);
-}
-
-/* Modern Video and Carousel Styling */
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    border-radius: var(--border-radius-lg) !important;
-    box-shadow: var(--shadow-xl);
-    transition: var(--transition);
-}
-
-.publication-video:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-}
-
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius-lg);
-}
-
-.publication-body img {
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-}
-
-.publication-body img:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.results-carousel {
-  overflow: hidden;
-  padding: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-/* Fallback for when JavaScript carousel doesn't work */
-.results-carousel:not(.carousel-initialized) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.results-carousel:not(.carousel-initialized) .item {
-  display: block !important;
-  width: 100% !important;
-  margin: 1rem auto !important;
-  max-width: 400px;
-}
-
-.results-carousel .item {
-  margin: 1rem;
-  overflow: hidden;
-  padding: 1.5rem;
-  font-size: 0;
-  background: var(--background-primary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
-}
-
-.results-carousel .item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.results-carousel .item img,
-.results-carousel video {
-  margin: 0;
-  border-radius: var(--border-radius);
-  width: 100%;
-  height: auto;
-}
-
-.results-carousel .subtitle {
-  font-size: 1rem !important;
-  color: var(--text-secondary);
-  margin-top: 1rem;
-  font-weight: 500;
-}
-
-.video-caption {
-  margin-top: 1rem;
-  padding: 0 1rem;
-}
-
-.video-caption p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Pagination and Misc Improvements */
-.slider-pagination .slider-page {
-  background: var(--primary-color);
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.slider-pagination .slider-page.is-active {
-  background: var(--primary-hover);
-  transform: scale(1.2);
-}
-
-.eql-cntrb { 
-  font-size: 0.875rem;
-  color: var(--text-light);
-  font-style: italic;
-}
-
-/* Section Titles */
-.title.is-3 {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 700 !important;
-  color: var(--text-primary);
-  margin-bottom: 2rem !important;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.title.is-3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
-}
-
-/* Content Improvements */
-.content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
-}
-
-.content.has-text-justified p {
-  margin-bottom: 1.5rem;
-}
-
-/* Footer Improvements */
-.footer {
-  background: var(--background-secondary);
-  border-top: 1px solid var(--border-color);
-  padding: 3rem 1.5rem;
-}
-
-.footer .content {
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.footer a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer a:hover {
-  color: var(--primary-hover);
-  text-decoration: underline;
-}
-
-/* BibTeX Styling */
-pre {
-  background: var(--background-accent) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: var(--border-radius) !important;
-  padding: 1.5rem !important;
-  font-size: 0.9rem !important;
-  overflow-x: auto;
-  box-shadow: var(--shadow-sm);
-}
-
-code {
-  background: var(--background-accent) !important;
-  color: var(--text-primary) !important;
-  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace !important;
-}
-
-/* BibTeX Section Improvements */
-.bibtex-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.copy-bibtex-btn {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: var(--border-radius);
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.copy-bibtex-btn:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.copy-bibtex-btn.copied {
-  background: #10b981;
-}
-
-.copy-bibtex-btn.copied .copy-text::after {
-  content: "ied!";
-}
-
-/* Scroll to Top Button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  box-shadow: var(--shadow-lg);
-}
-
-.scroll-to-top:hover {
-  background: var(--primary-hover);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
-}
-
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* More Works Dropdown */
-.more-works-container {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  z-index: 1000;
-}
-
-.more-works-btn {
-  background: var(--background-primary);
-  color: var(--text-primary);
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  padding: 0.75rem 1.25rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.more-works-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  background: var(--background-secondary);
-  border-color: var(--primary-color);
-}
-
-.more-works-btn .dropdown-arrow {
-  transition: var(--transition);
-  font-size: 0.8rem;
-}
-
-.more-works-btn.active .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-.more-works-dropdown {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  width: 400px;
-  max-width: 90vw;
-  background: var(--background-primary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-xl);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: var(--transition);
-  max-height: 70vh;
-  overflow-y: auto;
-}
-
-.more-works-dropdown.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 1.5rem 1rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.dropdown-header h4 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-}
-
-.close-btn:hover {
-  background: var(--background-accent);
-  color: var(--text-primary);
-}
-
-.works-list {
-  padding: 1rem;
-}
-
-.work-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition);
-  margin-bottom: 0.5rem;
-}
-
-.work-item:hover {
-  background: var(--background-accent);
-  transform: translateX(4px);
-}
-
-.work-info h5 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.work-info p {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
-}
-
-.work-venue {
-  font-size: 0.8rem;
-  color: var(--text-light);
-  font-style: italic;
-}
-
-.work-item .fas {
-  color: var(--text-light);
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
-  flex-shrink: 0;
-}
-
-
-/* Mobile Responsive Improvements */
-@media screen and (max-width: 768px) {
-  .hero-body {
-    padding: 2rem 1rem;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  .publication-header .hero-body {
-    padding: 3rem 1rem 2rem;
-  }
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAM">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="Resolving State Ambiguity in Robot Manipulation via Adaptive Working Memory Recoding">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="robot manipulation, state ambiguity, adaptive working memory, recoding, dynamic inference">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Qingda Hu, Ziheng Qiu">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
   
-  .publication-title {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 1.5rem !important;
-  }
-  
-  .publication-authors {
-    font-size: 1rem !important;
-  }
-  
-  .button {
-    margin: 0.25rem !important;
-    font-size: 0.875rem !important;
-    padding: 0.75rem 1rem !important;
-  }
-  
-  .more-works-container {
-    bottom: 2rem;
-    right: 1rem;
-    top: auto;
-  }
-  
-  .more-works-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
-  }
-  
-  .more-works-dropdown {
-    width: calc(100vw - 2rem);
-    right: -1rem;
-    bottom: calc(100% + 0.5rem);
-    top: auto;
-  }
-  
-  .results-carousel .item {
-    margin: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .teaser .hero-body {
-    padding: 1rem;
-  }
-  
-  .content.has-text-justified {
-    font-size: 1rem;
-  }
-}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="Magiclab">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Resolving State Ambiguity in Robot Manipulation via Adaptive Working Memory Recoding">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="Resolving State Ambiguity in Robot Manipulation via Adaptive Working Memory Recoding">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Resolving State Ambiguity in Robot Manipulation via Adaptive Working Memory Recoding - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
 
-@media screen and (max-width: 480px) {
-  .publication-title {
-    font-size: 2rem !important;
-  }
-  
-  .hero-body {
-    padding: 1.5rem 0.75rem;
-  }
-  
-  .more-works-container {
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    z-index: 1000;
-  }
-  
-  .more-works-btn {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-  }
-  
-  .more-works-dropdown {
-    position: absolute;
-    bottom: calc(100% + 0.5rem);
-    right: 0;
-    width: calc(100vw - 2rem);
-    max-width: 90vw;
-  }
-  
-  .link-block {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .button {
-    width: 100%;
-    justify-content: center;
-  }
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
 
-/* Tablet Responsive */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .hero-body {
-    padding: 3rem 2rem;
-  }
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
   
-  .publication-header .hero-body {
-    padding: 4rem 2rem 3rem;
-  }
-}
-
-/* Animation for page load */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero, .section {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Improved focus states for accessibility */
-.button:focus,
-.related-works-btn:focus,
-a:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-/* Print styles */
-@media print {
-  .more-works-container {
-    display: none;
-  }
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>PAM</title>
   
-  .hero, .section {
-    animation: none;
-  }
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/robot.svg">
+  <link rel="apple-touch-icon" href="static/images/robot.svg">
   
-  .button {
-    background: transparent !important;
-    color: var(--text-primary) !important;
-    box-shadow: none !important;
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
   }
-}
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/robot.svg",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
 
 
+<main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-2 publication-title">
+              Resolving State Ambiguity in Robot Manipulation<br>
+              via Adaptive Working Memory Recoding
+            </h1>
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Qingda Hu<sup>1</sup>,</span>
+              <span class="author-block">Ziheng Qiu<sup>1</sup>,</span>
+              <span class="author-block">Zijun Xu<sup>1</sup>,</span>
+              <span class="author-block">Kaizhao Zhang<sup>1</sup>,</span>
+              <span class="author-block">Xizhou Bu<sup>1</sup>,</span>
+              <span class="author-block">Zuolei Sun<sup>2</sup>,</span>
+              <span class="author-block">Bo Zhang<sup>2</sup>,</span>
+              <span class="author-block">Jieru Zhao<sup>3</sup>,</span>
+              <span class="author-block">Zhongxue Gan<sup>1</sup>,</span>
+              <span class="author-block">and Wenchao Ding<sup>1</sup></span>
+            </div>
+
+            <!-- Affiliations -->
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <sup>1</sup> Fudan Academy for Engineering and Technology, Fudan University    <sup>2</sup> Westwell<br>
+                <sup>3</sup> Department of Computer Science and Engineering, Shanghai Jiao Tong University, China
+              </span>
+            </div>
+
+            <!-- Emails -->
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                Email: qdhu24@m.fudan.edu.cn, dingwenchao@fudan.edu.cn
+              </span>
+            </div>
+
+            <!-- Links -->
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2512.24638" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+
+              <span class="link-block">
+                <a href="https://tinda24.github.io/pam/" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code(Coming Soon)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2512.24638" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser image -->
+      <img src="static/images/coarse.png" alt="Teaser Image" style="width: 120%; height: auto;">
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-left">
+        <strong style="color: #1a237e;">Left:   </strong> State ambiguity is common in robotic manipulation, and the relevant state transitions do not follow the Markov assumption; therefore, a long history window is essential. Here we illustrate a representative example of state ambiguity and elaborate on its various scenarios. <br>
+        <strong style="color: #2e7d32;">Right:   </strong> Existing methods and our method for encoding long history. Analogous to human continuous reasoning, PAM’s inference process is temporally dependent, extending the history window by maintaining a long-term adaptive working memory. The model only needs to encode the current observation at each inference step.       </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Real-World Deployment Videos (1x speed)</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item item-video1">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video1" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/guess.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Guessing Game: After the start signal, reveal the red block by lifting the cup.</p>
+          </div>
+        </div>
+
+        <div class="item item-video2">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video2" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/pothold.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Hold the Pot Lid: Pick up the pot lid and maintain for 2s before put it back.</p>
+          </div>
+        </div>
+
+        <div class="item item-video3">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video3" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/wipetwotime.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Wipe the Table Twice: Wipe the table for two times with the sponge.</p>
+          </div>
+        </div>
+
+        <div class="item item-video4">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video4" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/wipeonetime.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Wipe the Table Once: Wipe the table for one time with the sponge.</p>
+          </div>
+        </div>
+
+        <div class="item item-video5">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video4" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/exchange.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Exchange Objects: Move the fruit on the board aside and replace it with the other.</p>
+          </div>
+        </div>
+
+        <div class="item item-video6">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video4" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/blocks.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Buttons in Sequence: Press the buttons in order: Yellow, Green, Yellow and Blue.</p>
+          </div>
+        </div>
+
+        <div class="item item-video7">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video4" controls muted loop height="250" preload="metadata">
+            <!-- Your video file here -->
+            <source src="static/videos/blocks.mp4" type="video/mp4">
+          </video>
+          <div class="video-caption">
+            <p class="has-text-grey is-size-6 has-text-centered">Sponge and Square: Place the sponge and the block on the same side onto board.</p>
+          </div>
+        </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Abstract</h2>
+    <div class="content has-text-justified">
+      <!-- TODO: Replace with your paper abstract -->
+      <p>
+        <strong style="color: #1a237e;">State ambiguity</strong> is common in robotic manipulation. Identical observations may correspond to multiple valid behavior trajectories. The visuomotor policy must correctly extract the appropriate types and levels of information from the history to identify the current task phase. However, naively extending the history window is computationally expensive and may cause severe overfitting.<br><br>Inspired by the continuous nature of human reasoning and the recoding of working memory, we introduce <strong style="color: #1a237e;"><u>P</u>AM, a novel visuomotor <u>P</u>olicy equipped with <u>A</u>daptive working <u>M</u>emory.</strong> With minimal additional training cost in a two-stage manner, PAM supports a <strong style="color: #1a237e;">300-frame</strong> history window while maintaining high inference speed. Specifically, a hierarchical frame feature extractor yields two distinct representations for motion primitives and temporal disambiguation. For compact representation, a context router with range-specific queries is employed to produce compact context features across multiple history lengths. And an auxiliary objective of reconstructing historical information is introduced to ensure that the context router acts as an effective bottleneck. We meticulously design 7 tasks and verify that PAM can handle multiple scenarios of state ambiguity simultaneously. With a history window of approximately <strong style="color: #1a237e;">10 seconds</strong>, PAM still supports stable training and maintains inference speeds above <strong style="color: #1a237e;">20Hz</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+
+
+<!-- Pipeline overview -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Interpretability</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/pipeline.png" alt="PAM Pipeline" style="width: 100%; max-width: 100%;">
+            <figcaption class="has-text-grey is-size-6 has-text-left" style="margin-top: 10px;">
+              PAM uses two distinct types of features to guide action generation: <strong style="color: #1a237e;">motion primitives</strong> extracted from the
+              current frame and <strong style="color: #7b1fa2;">compact context features</strong> drawn from the extended history window. The <strong style="color: #2e7d32;">context features</strong> serve as working memory. (a)
+              illustrates the frame feature extractor used to obtain these features. The extractor employs a query-based mechanism to recode multimodal
+              inputs, enabling adaptive working memory recoding. (b) illustrates the context router, which receives the the <strong style="color: #2e7d32;">context features</strong> and utilizes
+              a set of query tokens spanning different history lengths to produce <strong style="color: #7b1fa2;">compact context features</strong>. PAM is trained in a two-stage manner. As
+              shown in the figure, different subsets of model parameters are progressively activated across the two stages.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End pipeline overview -->
+
+
+<!-- Real-world Robotic Tasks -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Real-world Robotic Tasks</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/exp.png" alt="Real-world Robotic Tasks" style="width: 100%; max-width: 100%;">
+            <figcaption class="has-text-grey is-size-6 has-text-left" style="margin-top: 10px;">
+              We carefully designed a set of real-world tasks as shown in the figure, with the primary types of state ambiguity indicated in the top-right corner. Each task comprises multiple subtasks, and to provide a more fine-grained evaluation, the task success rate is computed as the average completion rate across its subtasks.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Real-world Robotic Tasks -->
+
+
+<!-- Interpretation of PAM -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Interpretability</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/attn.png" alt="Interpretation of PAM" style="width: 100%; max-width: 100%;">
+            <figcaption class="has-text-grey is-size-6 has-text-left" style="margin-top: 10px;">
+              <strong>Left:</strong> The attention maps of the context router reveal which history portions PAM references
+              to resolve state ambiguity, accurately identifying key frames from preceding task stages in Wipe the Table Twice.<br><br>
+              <strong>Right:</strong> The attention maps of extractor indicate which modalities PAM uses for working memory encoding. In Guessing Game, the context query extracts
+              historical cues from visual observation of the block's position, while the motion primitives attends to joint states for posture maintenace.
+              In Wipe the Table Twice, both visual observations and joint states provide effective contextual cues, demonstrating the effectiveness of
+              our adaptive working memory encoding.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End pipeline overview -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+  title={Your Paper Title Here},
+  author={First Author and Second Author and Third Author},
+  journal={Conference/Journal Name},
+  year={2024},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
