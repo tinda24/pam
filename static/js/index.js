@@ -133,6 +133,13 @@ $(document).ready(function() {
 
 	// Initialize all div with carousel class
     var carousels = bulmaCarousel.attach('.carousel', options);
+
+    // Add class to indicate carousel is initialized
+    if (carousels && carousels.length > 0) {
+        carousels.forEach(function(carousel) {
+            carousel.element.classList.add('carousel-initialized');
+        });
+    }
 	
     bulmaSlider.attach();
     
